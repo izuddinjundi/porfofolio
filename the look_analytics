@@ -1,0 +1,6 @@
+SELECT DISTINCT id, age, gender, country from `bigquery-public-data.thelook_ecommerce.users`
+SELECT user_id, traffic_source, browser FROM `bigquery-public-data.thelook_ecommerce.events` 
+select o.created_at, o.order_id, o.user_id, status, num_of_item, oi.sale_price from `bigquery-public-data.thelook_ecommerce.orders` as o
+join `bigquery-public-data.thelook_ecommerce.order_items` as oi
+on o.order_id = oi.order_id
+
